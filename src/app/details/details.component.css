@@ -1,0 +1,93 @@
+.large-image {
+  width: 100%;
+  height: 45vh;
+  overflow: hidden;
+}
+
+.large-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.heading {
+  background-color: var(--light-bg);
+  min-height: 10vh;
+  max-width: fit-content;
+  position: relative;
+  top: -15vh;
+  left: 15vw;
+  margin-bottom: -10vh;
+  padding: 4em 4em 0 4em;
+}
+
+.heading h2 {
+  font-weight: 400;
+  font-size: 200%;
+  margin-top: 0;
+  max-width: 12em;
+}
+
+.tag {
+  font-size: 70%;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  background-color: var(--light-accent);
+  color: var(--light-main);
+  width: fit-content;
+}
+
+.tag:not(:last-child) {
+  margin-right: 1em;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 2em;
+  margin-bottom: 4em;
+}
+
+h3 {
+  margin-bottom: 2em;
+}
+
+h3::before {
+  content: '{';
+}
+
+h3::after {
+  content: '}';
+}
+
+.ingredients td {
+  min-width: 6em;
+  vertical-align: top;
+}
+
+
+/* --- MEDIA QUERIES --- */
+
+@media screen and (min-width: 850px) {
+
+  .container {
+    grid-template-columns: 40% 60%;
+    gap: 1em;
+  }
+
+  .heading {
+    left: 15vh;
+  }
+
+}
+
+/* --- DARK MODE --- */
+
+@media (prefers-color-scheme: dark) {
+
+  .heading {
+    background-color: var(--dark-bg);
+  }
+
+}

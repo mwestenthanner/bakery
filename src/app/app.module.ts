@@ -8,6 +8,8 @@ import { FiltersComponent } from './filters/filters.component';
 import { ListComponent } from './list/list.component';
 import { TeaserItemComponent } from './teaser/teaser-item/teaser-item.component';
 import { ListItemComponent } from './list/list-item/list-item.component';
+import { FooterComponent } from './footer/footer.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ListItemComponent } from './list/list-item/list-item.component';
     FiltersComponent,
     ListComponent,
     TeaserItemComponent,
-    ListItemComponent
+    ListItemComponent,
+    FooterComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule
