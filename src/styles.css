@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+/* --- FONT IMPORTS --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+/* --- CSS VARIABLES --- */
+
+:root {
+  --light-bg: white;
+  --light-main: black;
+  --light-accent: rgba(255, 195, 98, 1);
+  --dark-bg: rgba(25, 25, 25, 1);
+  --dark-main: rgba(233, 221, 203, 1);
+  --dark-accent: rgba(255, 195, 98, 0.66);
+}
+
+/* --- GLOBAL STYLES --- */
+
+body {
+  font-family: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+  background-color: var(--light-bg);
+  color: var(--light-main);
+}
+
+a {
+  color: var(--light-main);
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  body {
+    background-color: var(--dark-bg);
+    color: var(--dark-main);
+  }
+
+  a {
+    color: var(--dark-main);
+  }
+
+}
+
+

@@ -1,0 +1,48 @@
+#header {
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-svg {
+  width: 14ch;
+  position: relative;
+  top: -4em;
+  left: 0em;
+  z-index: -1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .header-svg {
+    opacity: 0.66;
+  }
+}
+
+.menu {
+  margin-top: 1.5em;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu ul li {
+  display: inline;
+}
+
+.menu ul li:not(:last-child) {
+  margin-right: 2em;
+}
+
+
+@media screen and (min-width: 885px) {
+  .header-svg {
+    left: 18em;
+  }
+}
+
+@media screen and (min-width: 517px) and (max-width: 592px) {
+  .header-svg {
+    left: 4.5em;
+  }
+}
