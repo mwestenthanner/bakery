@@ -6,6 +6,8 @@ import { HeaderComponent } from './header/header.component';
 import { TeaserComponent } from './teaser/teaser.component';
 import { FiltersComponent } from './filters/filters.component';
 import { ListComponent } from './list/list.component';
+import { TeaserItemComponent } from './teaser/teaser-item/teaser-item.component';
+import { ListItemComponent } from './list/list-item/list-item.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { ListComponent } from './list/list.component';
     HeaderComponent,
     TeaserComponent,
     FiltersComponent,
-    ListComponent
+    ListComponent,
+    TeaserItemComponent,
+    ListItemComponent
   ],
   imports: [
     BrowserModule

@@ -21,10 +21,17 @@ body {
   color: var(--light-main);
 }
 
+h3 {
+  font-weight: 400;
+  font-size: 90%;
+  letter-spacing: 0.2em;
+}
+
 a {
   color: var(--light-main);
   text-decoration: none;
 }
+
 
 @media (prefers-color-scheme: dark) {
 

@@ -1,0 +1,9 @@
+.row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5em;
+}
+
+app-teaser-item {
+  width: fit-content;
+}
