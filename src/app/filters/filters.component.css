@@ -1,0 +1,50 @@
+.filters {
+  border-bottom: 1px solid var(--light-accent);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  margin-top: 3em;
+}
+
+.input {
+  width: 80%;
+}
+
+.search-icon {
+  width: 1.5em;
+  height: auto;
+  margin-right: 1em;
+}
+
+#search, #search:focus {
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  color: var(--dark-main);
+  outline: none;
+  width: 55%;
+}
+
+#search::placeholder {
+  color: var(--dark-main);
+}
+
+select {
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  color: var(--dark-main);
+  margin-right: 3em;
+}
+
+.button {
+  background-color: var(--light-accent);
+  padding: 10px;
+  width: 20em;
+  border: none;
+  border-radius: 0;
+}
+
+.button:hover {
+  cursor: pointer;
+}

@@ -38,6 +38,7 @@
   font-weight: 400;
   font-size: 105%;
   max-width: 80%;
+  color: var(--dark-main);
 }
 
 .tag {

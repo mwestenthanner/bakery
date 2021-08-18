@@ -32,6 +32,10 @@ a {
   text-decoration: none;
 }
 
+input, button, select {
+  font-family: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+}
+
 
 @media (prefers-color-scheme: dark) {
 
