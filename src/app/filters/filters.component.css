@@ -3,6 +3,8 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 1em;
+  width: 85%;
+  margin: 0 auto;
   margin-top: 3em;
 }
 
@@ -20,20 +22,20 @@
   padding: 10px;
   background-color: transparent;
   border: none;
-  color: var(--dark-main);
+  color: var(--light-main);
   outline: none;
-  width: 55%;
+  width: 45%;
 }
 
 #search::placeholder {
-  color: var(--dark-main);
+  color: var(--light-main);
 }
 
 select {
   background-color: transparent;
   padding: 10px;
   border: none;
-  color: var(--dark-main);
+  color: var(--light-main);
   margin-right: 3em;
 }
 
@@ -47,4 +49,22 @@ select {
 
 .button:hover {
   cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  #search, #search:focus {
+    color: var(--dark-main);
+  }
+
+  #search::placeholder {
+    color: var(--dark-main);
+  }
+
+
+  select {
+    background-color: transparent;
+    color: var(--dark-main);
+  }
+
 }

@@ -1,0 +1,44 @@
+.image {
+  aspect-ratio: 5 / 7;
+  overflow: hidden;
+  border-radius: 1em;
+}
+
+.gradient {
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
+  background-size: cover;
+}
+
+img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: -1;
+  position: relative;
+}
+
+/* --- content styling --- */
+.recipe-title {
+  font-weight: 400;
+  font-size: 105%;
+  max-width: 80%;
+  color: var(--light-main);
+}
+
+.tag {
+  font-size: 70%;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  background-color: var(--light-accent);
+  color: var(--light-main);
+  width: fit-content;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .recipe-title {
+    color: var(--dark-main);
+  }
+
+}
