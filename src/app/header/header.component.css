@@ -2,6 +2,8 @@
   padding: 2em 3em 2em 1em;
   display: flex;
   justify-content: space-between;
+  width: 90%;
+  margin-left: 5%;
 }
 
 .menu {
@@ -63,6 +65,19 @@ strong::after {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* --- Media Queries --- */
+
+@media screen and (min-width: 650px) {
+
+  #header {
+    width: 100%;
+    margin-left: 0;
+  }
+
+}
+
+/* --- Dark Mode --- */
 
 @media (prefers-color-scheme: dark) {
   strong::after {

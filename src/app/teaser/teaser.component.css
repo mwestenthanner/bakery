@@ -2,8 +2,31 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.5em;
+  width: 250%;
+}
+
+h2, .row {
+  margin-left: 7.5%;
 }
 
 app-teaser-item {
   width: fit-content;
+}
+
+/* --- Media Queries --- */
+
+@media screen and (min-width: 515px) {
+
+}
+
+@media screen and (min-width: 1350px) {
+
+  .row {
+    width: 100%;
+  }
+
+  h2, .row {
+    margin-left: 0;
+  }
+
 }
