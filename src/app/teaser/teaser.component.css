@@ -1,8 +1,13 @@
 .row {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-direction: row;
   gap: 1.5em;
-  width: 250%;
+  overflow-x: auto;
+  width: 105vw;
+}
+
+.row::-webkit-scrollbar {
+  display: none;
 }
 
 h2, .row {
@@ -11,6 +16,7 @@ h2, .row {
 
 app-teaser-item {
   width: fit-content;
+  min-width: 14em;
 }
 
 /* --- Media Queries --- */
