@@ -1,9 +1,6 @@
 <h2>Latest recipes</h2>
 <div class="row">
-  <app-teaser-item></app-teaser-item>
-  <app-teaser-item></app-teaser-item>
-  <app-teaser-item></app-teaser-item>
-  <app-teaser-item></app-teaser-item>
-  <app-teaser-item></app-teaser-item>
+  <app-teaser-item
+    *ngFor="let recipeItem of recipes" [recipe]="recipeItem"></app-teaser-item>
 </div>
 

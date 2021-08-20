@@ -1,12 +1,12 @@
 <div class="image">
 
   <div class="gradient">
-  <img alt="Recipe image" src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a" />
+  <img [alt]=recipeElement.title [src]=recipeElement.imgVer/>
   </div>
 
 </div>
 
 <div class="content">
-  <h4 class="recipe-title">Smooth pumpkin soup with feta</h4>
-  <span class="tag">Vegetarian</span>
+  <span class="tag" *ngFor="let item of recipeElement.tags">{{ item }}</span>
+  <h4 class="recipe-title">{{ recipeElement.title }}</h4>
 </div>

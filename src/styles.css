@@ -11,6 +11,8 @@
   --dark-bg: rgba(25, 25, 25, 1);
   --dark-main: rgba(233, 221, 203, 1);
   --dark-accent: rgba(255, 195, 98, 0.66);
+  --light-gradient: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 80%);;
+  --dark-gradient: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);;
 }
 
 /* --- GLOBAL STYLES --- */
@@ -36,6 +38,36 @@ a {
 input, button, select {
   font-family: 'Roboto Mono', 'Courier New', 'Courier', monospace;
 }
+
+/* -- Shared Styles --- */
+
+.recipe-title {
+  font-weight: 400;
+  font-size: 105%;
+  max-width: 80%;
+  color: var(--dark-main);
+}
+
+.tag {
+  font-size: 70%;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  background-color: var(--light-accent);
+  color: var(--light-main);
+  width: fit-content;
+}
+
+.tag:not(:last-child) {
+  margin-right: 0.75em;
+}
+
+.tag:hover {
+  background-color: transparent;
+  color: var(--light-accent);
+  border: 0.1em solid var(--light-accent);
+  padding: 0.15em 0.4em 0.15em 0.4em;
+}
+
+/* --- Dark Mode --- */
 
 
 @media (prefers-color-scheme: dark) {

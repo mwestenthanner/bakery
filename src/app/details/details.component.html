@@ -3,48 +3,33 @@
 </div>
 
 <div class="heading">
-  <h2>Pumpkin Soup</h2>
-  <span class="tag">Vegetarian</span><span class="tag">Soup</span>
+  <h2>{{ detailRecipe.title }}</h2>
+  <span class="tag" *ngFor="let item of detailRecipe.tags">{{ item }}</span>
 </div>
 
 <div class="container">
 
   <div class="ingredients">
 
-    <h3>Ingredients</h3>
+    <h3>Zutaten</h3>
 
   <table>
-    <tr>
-      <td>2 kg</td>
-      <td>pumpkin or butternut squash</td>
-    </tr>
-    <tr>
-      <td>750 ml</td>
-      <td>chicken or vegetable broth</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>large onion</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>garlic cloves</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Salt and pepper</td>
-    </tr>
+    <tbody>
+      <tr *ngFor="let item of ingredientsList; let i = index">
+        <td *ngFor="let cell of item">
+          {{ cell }}
+        </td>
+      </tr>
+    </tbody>
   </table>
 
   </div>
 
   <div class="instructions">
-    <h3>Instructions</h3>
+    <h3>Zubereitung</h3>
 
   <ol>
-    <li>Cut the pumpkin into slices. Cut the skin off and scrape seeds out. Cut into small chunks.</li>
-    <li>Place the pumpkin, onion, garlic, broth and water in a pot - liquid won't quite cover all the pumpkin. Bring to a boil, uncovered, then reduce heat and let simmer rapidly until pumpkin is tender (check with butter knife) - about 10 minutes.</li>
-    <li>Remove from heat and use a stick blender to blend until smooth.</li>
+    <li *ngFor="let step of detailRecipe.instructions">{{ step }}</li>
   </ol>
   </div>
 

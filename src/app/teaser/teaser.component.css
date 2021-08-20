@@ -17,6 +17,7 @@ h2, .row {
 app-teaser-item {
   width: fit-content;
   min-width: 14em;
+  flex: 1;
 }
 
 /* --- Media Queries --- */

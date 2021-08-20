@@ -1,8 +1,5 @@
 <div class="container">
-  <app-list-item></app-list-item>
-  <app-list-item></app-list-item>
-  <app-list-item></app-list-item>
-  <app-list-item></app-list-item>
-  <app-list-item></app-list-item>
-  <app-list-item></app-list-item>
+  <app-list-item
+    *ngFor="let recipeItem of recipes"
+    [recipeElement]="recipeItem"></app-list-item>
 </div>
