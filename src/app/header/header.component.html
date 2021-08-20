@@ -6,12 +6,39 @@
 
   <nav class="menu">
     <ul>
-      <li class="dropdown"><a href="#">Categories</a></li>
+      <li class="dropdown" appDropdown>
+        <a href="#">Categories</a>
+        <ul class="dropdown-secondary">
+          <li><a href="#">Vegan</a></li>
+          <li><a href="#">Pasta</a></li>
+          <li><a href="#">Cakes</a></li>
+        </ul>
+      </li>
       <li><a href="#">All recipes</a></li>
       <li><a href="#">Login</a></li>
     </ul>
   </nav>
 
+  <svg (click)="menu=!menu" class="mobile-icon" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g><rect x="0" y="7.443" width="100" height="10.891"/><rect x="0" y="43.115" width="50" height="12.422"/><rect x="0" y="80.452" width="79.053" height="12.105" /></g>
+  </svg>
+
 </div>
+
+<nav class="mobile-menu" *ngIf="menu" (mouseleave)="hover=false">
+  <ul>
+    <li class="dropdown"
+      (mouseenter)="hover=true"
+      appDropdown>
+      <a href="#">Categories</a>
+    </li>
+    <li><a href="#">All recipes</a></li>
+    <li><a href="#">Login</a></li>
+  </ul>
+  <ul class="dropdown-secondary" *ngIf="hover">
+    <li><a href="#">Vegan</a></li>
+    <li><a href="#">Pasta</a></li>
+    <li><a href="#">Cakes</a></li>
+  </ul>
+</nav>
 
 

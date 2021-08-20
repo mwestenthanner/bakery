@@ -10,6 +10,7 @@ import { TeaserItemComponent } from './teaser/teaser-item/teaser-item.component'
 import { ListItemComponent } from './list/list-item/list-item.component';
 import { FooterComponent } from './footer/footer.component';
 import { DetailsComponent } from './details/details.component';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DetailsComponent } from './details/details.component';
     TeaserItemComponent,
     ListItemComponent,
     FooterComponent,
-    DetailsComponent
+    DetailsComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule

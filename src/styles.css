@@ -81,6 +81,10 @@ input, button, select {
     color: var(--dark-main);
   }
 
+  .tag {
+    background-color: var(--dark-accent);
+  }
+
 }
 
 

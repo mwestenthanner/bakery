@@ -112,4 +112,8 @@ select option {
     color: var(--dark-main);
   }
 
+  .button {
+    background-color: var(--dark-accent);
+  }
+
 }

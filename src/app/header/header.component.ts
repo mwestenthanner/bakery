@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  hover: boolean = false;
+  menu: boolean = false;
 
   constructor() { }
 
