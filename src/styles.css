@@ -67,6 +67,33 @@ input, button, select {
   padding: 0.15em 0.4em 0.15em 0.4em;
 }
 
+.button {
+  box-sizing: border-box;
+  background-color: var(--light-accent);
+  padding: 10px;
+  width: 20em;
+  border: none;
+  border-radius: 0;
+}
+
+.button:hover {
+  cursor: pointer;
+  padding: 8px;
+  background-color: transparent;
+  color: var(--light-accent);
+  border: 2px solid var(--light-accent);
+  font-weight: 800;
+}
+
+/* --- Printing --- */
+
+@media print {
+  app-header, app-footer {
+    display: none;
+  }
+}
+
+
 /* --- Dark Mode --- */
 
 
@@ -82,6 +109,10 @@ input, button, select {
   }
 
   .tag {
+    background-color: var(--dark-accent);
+  }
+
+  .button {
     background-color: var(--dark-accent);
   }
 

@@ -7,13 +7,15 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
+  print: boolean = false;
 
   detailRecipe = new Recipe(
     'Linsenbolognese',
+    'Wir haben dieses Rezept in einem vegetarischen Kochbuch aus Amerika entdeckt. Zuerst waren wir sehr skeptisch, aber der Geschmack war überwältigend. Die Zutaten hat man fast immer vorrätig im Hause. Wieder einmal - es muss nicht immer Fleisch sein.',
     'https://thealmondeater.com/wp-content/uploads/2019/12/Lentil-Bolognese-Recipe-1-3.jpg',
     'https://thealmondeater.com/wp-content/uploads/2019/12/Lentil-Bolognese-Recipe-1-3.jpg',
     ['40 g * Linsen', '1 * Zwiebel', '2 * Knoblauchzehen'],
-    ['In einer hohen Pfanne die Zwiebel, den Knoblauch, die Karotten und den Sellerie bei mittlerer Temperatur anschwitzen. Das Tomatenmark hinzugeben und anrösten. ', 'Die Tomaten, die Brühe, die Linsen und die Kräuter außer Basilikum hinzugeben, mit einem Deckel bedecken und ca. 20 - 25 Minuten leise köcheln lassen. Eventuell noch etwas Flüssigkeit hinzugeben. Die Bolognese muss die Konsistenz der normalen Hackfleischsauce haben.'],
+    ['In einer hohen Pfanne die Zwiebel, den Knoblauch, die Karotten und den Sellerie bei mittlerer Temperatur anschwitzen. Das Tomatenmark hinzugeben und anrösten. ', 'Die Tomaten, die Brühe, die Linsen und die Kräuter außer Basilikum hinzugeben, mit einem Deckel bedecken und ca. 20 - 25 Minuten leise köcheln lassen. Eventuell noch etwas Flüssigkeit hinzugeben. Die Bolognese muss die Konsistenz der normalen Hackfleischsauce haben.', 'In einer hohen Pfanne die Zwiebel, den Knoblauch, die Karotten und den Sellerie bei mittlerer Temperatur anschwitzen. Das Tomatenmark hinzugeben und anrösten. ', 'Die Tomaten, die Brühe, die Linsen und die Kräuter außer Basilikum hinzugeben, mit einem Deckel bedecken und ca. 20 - 25 Minuten leise köcheln lassen. Eventuell noch etwas Flüssigkeit hinzugeben. Die Bolognese muss die Konsistenz der normalen Hackfleischsauce haben.'],
     40,
     ['Vegetarisch', 'Vegan', 'Pasta']
   );

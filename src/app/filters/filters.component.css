@@ -50,24 +50,6 @@ select option {
   display: none;
 }
 
-.button {
-  box-sizing: border-box;
-  background-color: var(--light-accent);
-  padding: 10px;
-  width: 20em;
-  border: none;
-  border-radius: 0;
-}
-
-.button:hover {
-  cursor: pointer;
-  padding: 8px;
-  background-color: transparent;
-  color: var(--light-accent);
-  border: 2px solid var(--light-accent);
-  font-weight: 800;
-}
-
 /* --- Media Queries --- */
 @media screen and (min-width: 650px) {
 
@@ -110,10 +92,6 @@ select option {
   select option {
     background-color: var(--dark-bg);
     color: var(--dark-main);
-  }
-
-  .button {
-    background-color: var(--dark-accent);
   }
 
 }
