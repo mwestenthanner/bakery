@@ -1,5 +1,5 @@
 <div class="large-image">
-  <img alt="Recipe image" class="teaser-img" src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a" />
+  <img alt="Recipe image" class="teaser-img" [src]=detailRecipe.imgHor />
 </div>
 
 <div class="heading">
@@ -16,7 +16,7 @@
   </div>
 
   <div class="print">
-    <button class="button" onclick="window.print();return false;">Rezept drucken</button>
+    <button class="button" (click)="printRecipe()">{{ printButtonText }}</button>
   </div>
 
   <div class="ingredients">

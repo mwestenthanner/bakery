@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from '../recipe.model';
+import { RecipeService } from '../services/recipe.service';
+
+import { jsPDF } from 'jspdf';
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-details',
@@ -9,23 +13,18 @@ import { Recipe } from '../recipe.model';
 export class DetailsComponent implements OnInit {
   print: boolean = false;
 
-  detailRecipe = new Recipe(
-    'Linsenbolognese',
-    'Wir haben dieses Rezept in einem vegetarischen Kochbuch aus Amerika entdeckt. Zuerst waren wir sehr skeptisch, aber der Geschmack war überwältigend. Die Zutaten hat man fast immer vorrätig im Hause. Wieder einmal - es muss nicht immer Fleisch sein.',
-    'https://thealmondeater.com/wp-content/uploads/2019/12/Lentil-Bolognese-Recipe-1-3.jpg',
-    'https://thealmondeater.com/wp-content/uploads/2019/12/Lentil-Bolognese-Recipe-1-3.jpg',
-    ['40 g * Linsen', '1 * Zwiebel', '2 * Knoblauchzehen'],
-    ['In einer hohen Pfanne die Zwiebel, den Knoblauch, die Karotten und den Sellerie bei mittlerer Temperatur anschwitzen. Das Tomatenmark hinzugeben und anrösten. ', 'Die Tomaten, die Brühe, die Linsen und die Kräuter außer Basilikum hinzugeben, mit einem Deckel bedecken und ca. 20 - 25 Minuten leise köcheln lassen. Eventuell noch etwas Flüssigkeit hinzugeben. Die Bolognese muss die Konsistenz der normalen Hackfleischsauce haben.', 'In einer hohen Pfanne die Zwiebel, den Knoblauch, die Karotten und den Sellerie bei mittlerer Temperatur anschwitzen. Das Tomatenmark hinzugeben und anrösten. ', 'Die Tomaten, die Brühe, die Linsen und die Kräuter außer Basilikum hinzugeben, mit einem Deckel bedecken und ca. 20 - 25 Minuten leise köcheln lassen. Eventuell noch etwas Flüssigkeit hinzugeben. Die Bolognese muss die Konsistenz der normalen Hackfleischsauce haben.'],
-    40,
-    ['Vegetarisch', 'Vegan', 'Pasta']
-  );
+  detailRecipe: Recipe;
+  ingredientsList: Array<[]>;
 
-  ingredientsList = this.getIngredients(this.detailRecipe.ingredients);
+  isMobile: boolean = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  printButtonText: string = this.getPrintButtonText();
 
-  constructor() {
+  constructor(private recipeService: RecipeService) {
   }
 
   ngOnInit(): void {
+    this.detailRecipe = this.recipeService.getRecipeDetails(2);
+    this.ingredientsList = this.getIngredients(this.detailRecipe.ingredients);
   }
 
   getIngredients(list:string[]): Array<[]> {
@@ -38,6 +37,29 @@ export class DetailsComponent implements OnInit {
     });
 
     return ingr;
+
+  }
+
+  getPrintButtonText(): string {
+
+    if (this.isMobile) {
+      var buttonText = "Als PDF speichern";
+    } else var buttonText = "Rezept drucken";
+
+    return buttonText;
+  }
+
+  printRecipe(): void {
+
+    if (!this.isMobile) {
+
+        var pdf = new jsPDF();
+
+        pdf.save(this.detailRecipe.title + '.pdf');
+
+    } else {
+      window.print();
+    }
 
   }
 
