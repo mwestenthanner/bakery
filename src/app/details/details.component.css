@@ -87,15 +87,15 @@ h3::after {
 
 .printable {
   color: black;
-  font-size: 200%;
+  font-size: 40%;
 }
 
 .printable .heading {
   background-color: white;
 }
 
-.printable .container {
-  grid-template-columns: 100%;
+.printable .large-image {
+ max-height: 150px;
 }
 
 .printable .print {

@@ -24,8 +24,6 @@ export class DetailsComponent implements OnInit {
   isMobile: boolean = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   printButtonText: string = this.getPrintButtonText();
 
-  @ViewChild('content', { static: true }) content: ElementRef;
-
   constructor(private recipeService: RecipeService) {
   }
 
@@ -76,10 +74,10 @@ export class DetailsComponent implements OnInit {
     html2canvas(data, {useCORS : true}).then(canvas => {
       var imgWidth = 208;
       var imgHeight = canvas.height * imgWidth / canvas.width;
-      const contentDataURL = canvas.toDataURL('image/png')
+      const contentDataURL = canvas.toDataURL("image/jpeg", 0.3);
       let pdf = new jsPDF('p', 'mm', 'a4');
       var position = 0;
-      pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)
+      pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight, undefined, 'FAST')
       pdf.save(this.detailRecipe.title + '.pdf');
     });
 
