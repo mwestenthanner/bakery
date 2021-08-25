@@ -1,8 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef
+} from '@angular/core';
 import { Recipe } from '../recipe.model';
 import { RecipeService } from '../services/recipe.service';
 
-import { jsPDF } from 'jspdf';
+import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
 @Component({
@@ -18,6 +23,8 @@ export class DetailsComponent implements OnInit {
 
   isMobile: boolean = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   printButtonText: string = this.getPrintButtonText();
+
+  @ViewChild('content', { static: true }) content: ElementRef;
 
   constructor(private recipeService: RecipeService) {
   }
@@ -51,16 +58,32 @@ export class DetailsComponent implements OnInit {
 
   printRecipe(): void {
 
-    if (!this.isMobile) {
-
-        var pdf = new jsPDF();
-
-        pdf.save(this.detailRecipe.title + '.pdf');
-
+    if (this.isMobile) {
+      this.saveToPdf()
     } else {
       window.print();
     }
 
+  }
+
+  saveToPdf(): void {
+
+    let data = document.getElementById("content");
+
+    data.classList.add("printable");
+
+    console.log(data);
+    html2canvas(data, {useCORS : true}).then(canvas => {
+      var imgWidth = 208;
+      var imgHeight = canvas.height * imgWidth / canvas.width;
+      const contentDataURL = canvas.toDataURL('image/png')
+      let pdf = new jsPDF('p', 'mm', 'a4');
+      var position = 0;
+      pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight)
+      pdf.save(this.detailRecipe.title + '.pdf');
+    });
+
+    data.classList.remove("printable");
   }
 
 }

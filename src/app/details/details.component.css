@@ -85,6 +85,23 @@ h3::after {
 
 }
 
+.printable {
+  color: black;
+  font-size: 200%;
+}
+
+.printable .heading {
+  background-color: white;
+}
+
+.printable .container {
+  grid-template-columns: 100%;
+}
+
+.printable .print {
+  display: none;
+}
+
 
 /* --- Media Queries --- */
 

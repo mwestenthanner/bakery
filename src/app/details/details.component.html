@@ -1,50 +1,53 @@
-<div class="large-image">
-  <img alt="Recipe image" class="teaser-img" [src]=detailRecipe.imgHor />
+<div id="content" #content>
+
+  <div class="large-image">
+    <img alt="Recipe image" class="teaser-img" [src]=detailRecipe.imgHor />
+  </div>
+
+  <div class="heading">
+    <h2>{{ detailRecipe.title }}</h2>
+    <span class="tag" *ngFor="let item of detailRecipe.tags">{{ item }}</span>
+  </div>
+
+  <div class="container">
+
+    <div class="description">
+      <p>{{ detailRecipe.desc }}</p>
+    </div>
+
+    <div class="print">
+      <button class="button" (click)="printRecipe()">{{ printButtonText }}</button>
+    </div>
+
+    <div class="ingredients">
+
+      <h3>Zutaten</h3>
+
+    <table>
+      <tbody>
+        <tr *ngFor="let item of ingredientsList; let i = index">
+          <td *ngFor="let cell of item">
+            {{ cell }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+    <div class="instructions">
+      <h3>Zubereitung</h3>
+
+    <ol>
+      <li *ngFor="let step of detailRecipe.instructions">{{ step }}</li>
+    </ol>
+    </div>
+
+
+  </div>
+
 </div>
 
-<div class="heading">
-  <h2>{{ detailRecipe.title }}</h2>
-  <span class="tag" *ngFor="let item of detailRecipe.tags">{{ item }}</span>
-</div>
-
-
-
-<div class="container">
-
-  <div class="description">
-    <p>{{ detailRecipe.desc }}</p>
-  </div>
-
-  <div class="print">
-    <button class="button" (click)="printRecipe()">{{ printButtonText }}</button>
-  </div>
-
-  <div class="ingredients">
-
-    <h3>Zutaten</h3>
-
-  <table>
-    <tbody>
-      <tr *ngFor="let item of ingredientsList; let i = index">
-        <td *ngFor="let cell of item">
-          {{ cell }}
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  </div>
-
-  <div class="instructions">
-    <h3>Zubereitung</h3>
-
-  <ol>
-    <li *ngFor="let step of detailRecipe.instructions">{{ step }}</li>
-  </ol>
-  </div>
-
-
-</div>
 
 
 
