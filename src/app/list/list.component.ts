@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Recipe } from '../recipe.model';
 import { RecipeService } from '../services/recipe.service';
 
@@ -8,13 +8,30 @@ import { RecipeService } from '../services/recipe.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+  @Input() listFilter: string = '';
 
   recipes: Recipe[];
 
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
-    this.recipes = this.recipeService.getRecipes(5);
+
+    if (this.listFilter === '') {
+      this.recipes = this.recipeService.getRecipes(5);
+    } else {
+      this.recipes = this.recipeService.filterRecipes(this.listFilter);
+    }
+
+  }
+
+  ngOnChanges(changes): void {
+
+    if (this.listFilter === '') {
+      this.recipes = this.recipeService.getRecipes(5);
+    } else {
+      this.recipes = this.recipeService.filterRecipes(this.listFilter);
+    }
+
   }
 
 }

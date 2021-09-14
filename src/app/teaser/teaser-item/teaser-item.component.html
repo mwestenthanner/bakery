@@ -1,15 +1,21 @@
-<div class="teaser-item"><a [routerLink]="['recipes', recipe.url]">
+<div class="teaser-item">
 
+  <a [routerLink]="['recipes', recipe.url]">
   <div class="gradient">
     <img [alt]=recipe.title class="teaser-img" [src]=recipe.imgVer />
   </div>
+  </a>
 
   <div class="content">
+
+    <a [routerLink]="['recipes', recipe.url]">
     <h4 class="recipe-title">{{ recipe.title }}</h4>
+    </a>
+
     <div class="tag-container">
-      <span class="tag" *ngFor="let item of recipe.tags">{{ item }}</span>
+      <span class="tag" *ngFor="let item of recipe.tags" [routerLink]="['/tags', item]">{{ item }}</span>
     </div>
   </div>
 
-</a></div>
+</div>
 

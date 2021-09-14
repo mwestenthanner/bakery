@@ -54,6 +54,11 @@ input, button, select {
   background-color: var(--light-accent);
   color: var(--light-main);
   width: fit-content;
+  text-transform: capitalize;
+  display: inline-block;
+  z-index: 3;
+  cursor: pointer;
+  margin-bottom: 0.5em;
 }
 
 .tag:not(:last-child) {

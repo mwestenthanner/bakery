@@ -1,4 +1,4 @@
-<a [routerLink]="['recipes', recipeElement.url]">
+<a [routerLink]="['/recipes', recipeElement.url]">
 <div class="image">
 
   <div class="gradient">
@@ -6,9 +6,13 @@
   </div>
 
 </div>
+</a>
 
 <div class="content">
-  <span class="tag" *ngFor="let item of recipeElement.tags">{{ item }}</span>
+  <span class="tag" *ngFor="let item of recipeElement.tags" [routerLink]="['/tags', item]">{{ item }}</span>
+
+  <a [routerLink]="['/recipes', recipeElement.url]">
   <h4 class="recipe-title">{{ recipeElement.title }}</h4>
+  </a>
 </div>
-</a>
+

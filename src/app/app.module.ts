@@ -13,11 +13,13 @@ import { FooterComponent } from './footer/footer.component';
 import { DetailsComponent } from './details/details.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { MainComponent } from './views/main/main.component';
+import { TagComponent } from './views/tag/tag.component';
 
 const appRoutes: Routes = [
   { path: '', component: MainComponent },
   { path: 'recipes', component: ListComponent },
   { path: 'recipes/:title', component: DetailsComponent },
+  { path: 'tags/:tag', component: TagComponent },
 ]
 
 @NgModule({
@@ -33,6 +35,7 @@ const appRoutes: Routes = [
     DetailsComponent,
     DropdownDirective,
     MainComponent,
+    TagComponent,
   ],
   imports: [
     BrowserModule,

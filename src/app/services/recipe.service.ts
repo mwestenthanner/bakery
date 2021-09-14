@@ -1,4 +1,4 @@
-import { Injectable, EventEmitter } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { Recipe } from "../recipe.model";
 
 @Injectable({providedIn: 'root'})
@@ -15,7 +15,7 @@ export class RecipeService {
       ['40 g * Linsen', '1 * Zwiebel', '2 * Knoblauchzehen'],
       ['In einer hohen Pfanne die Zwiebel, den Knoblauch, die Karotten und den Sellerie bei mittlerer Temperatur anschwitzen. Das Tomatenmark hinzugeben und anrösten. ', 'Die Tomaten, die Brühe, die Linsen und die Kräuter außer Basilikum hinzugeben, mit einem Deckel bedecken und ca. 20 - 25 Minuten leise köcheln lassen. Eventuell noch etwas Flüssigkeit hinzugeben. Die Bolognese muss die Konsistenz der normalen Hackfleischsauce haben.'],
       40,
-      ['Vegetarisch', 'Vegan', 'Pasta']
+      ['vegetarisch', 'vegan', 'pasta']
     ),
 
     new Recipe(
@@ -27,7 +27,7 @@ export class RecipeService {
       ['200 g * Mehl', '4 * Eier', '200 g * Zucker'],
       ['Backofen auf 175°C vorheizen. Eine Kastenform einfetten und bemehlen. Butter, braunen Zucker, Vanillezucker und Salz in einer großen Schüssel schaumig schlagen.', 'Ein Ei nach dem anderen dazugeben und die Milch unter Rühren in die Schüssel gießen. In einer weiteren Schüssel Mehl, Backpulver und Kakao vermischen.'],
       120,
-      ['Kuchen', 'Desserts']
+      ['kuchen', 'desserts']
     ),
 
     new Recipe(
@@ -39,7 +39,7 @@ export class RecipeService {
       ['200 g * Mehl', '4 * Eier', '200 g * Zucker'],
       ['Backofen auf 175°C vorheizen. Eine Kastenform einfetten und bemehlen. Butter, braunen Zucker, Vanillezucker und Salz in einer großen Schüssel schaumig schlagen.', 'Ein Ei nach dem anderen dazugeben und die Milch unter Rühren in die Schüssel gießen. In einer weiteren Schüssel Mehl, Backpulver und Kakao vermischen.'],
       120,
-      ['Vegetarisch', 'Salate']
+      ['vegetarisch', 'salate']
     ),
 
     new Recipe(
@@ -51,7 +51,7 @@ export class RecipeService {
       ['200 g * Mehl', '4 * Eier', '200 g * Zucker'],
       ['Backofen auf 175°C vorheizen. Eine Kastenform einfetten und bemehlen. Butter, braunen Zucker, Vanillezucker und Salz in einer großen Schüssel schaumig schlagen.', 'Ein Ei nach dem anderen dazugeben und die Milch unter Rühren in die Schüssel gießen. In einer weiteren Schüssel Mehl, Backpulver und Kakao vermischen.'],
       120,
-      ['Kuchen']
+      ['kuchen']
     ),
 
     new Recipe(
@@ -63,7 +63,7 @@ export class RecipeService {
       ['200 g * Mehl', '4 * Eier', '200 g * Zucker'],
       ['Backofen auf 175°C vorheizen. Eine Kastenform einfetten und bemehlen. Butter, braunen Zucker, Vanillezucker und Salz in einer großen Schüssel schaumig schlagen.', 'Ein Ei nach dem anderen dazugeben und die Milch unter Rühren in die Schüssel gießen. In einer weiteren Schüssel Mehl, Backpulver und Kakao vermischen.'],
       120,
-      ['Vegan', 'Desserts']
+      ['vegan', 'desserts']
     ),
 
     new Recipe(
@@ -75,7 +75,7 @@ export class RecipeService {
       ['40 g * Linsen', '1 * Zwiebel', '2 * Knoblauchzehen'],
       ['In einer hohen Pfanne die Zwiebel, den Knoblauch, die Karotten und den Sellerie bei mittlerer Temperatur anschwitzen. Das Tomatenmark hinzugeben und anrösten. ', 'Die Tomaten, die Brühe, die Linsen und die Kräuter außer Basilikum hinzugeben, mit einem Deckel bedecken und ca. 20 - 25 Minuten leise köcheln lassen. Eventuell noch etwas Flüssigkeit hinzugeben. Die Bolognese muss die Konsistenz der normalen Hackfleischsauce haben.'],
       40,
-      ['Reis', 'Vegan', 'Asia']
+      ['reis', 'vegan', 'asia']
     ),
 
     new Recipe(
@@ -87,7 +87,7 @@ export class RecipeService {
       ['40 g * Linsen', '1 * Zwiebel', '2 * Knoblauchzehen'],
       ['In einer hohen Pfanne die Zwiebel, den Knoblauch, die Karotten und den Sellerie bei mittlerer Temperatur anschwitzen. Das Tomatenmark hinzugeben und anrösten. ', 'Die Tomaten, die Brühe, die Linsen und die Kräuter außer Basilikum hinzugeben, mit einem Deckel bedecken und ca. 20 - 25 Minuten leise köcheln lassen. Eventuell noch etwas Flüssigkeit hinzugeben. Die Bolognese muss die Konsistenz der normalen Hackfleischsauce haben.'],
       40,
-      ['Frühstück', 'Vegan']
+      ['frühstück', 'vegan']
     ),
 
     new Recipe(
@@ -99,7 +99,7 @@ export class RecipeService {
       ['40 g * Linsen', '1 * Zwiebel', '2 * Knoblauchzehen'],
       ['In einer hohen Pfanne die Zwiebel, den Knoblauch, die Karotten und den Sellerie bei mittlerer Temperatur anschwitzen. Das Tomatenmark hinzugeben und anrösten. ', 'Die Tomaten, die Brühe, die Linsen und die Kräuter außer Basilikum hinzugeben, mit einem Deckel bedecken und ca. 20 - 25 Minuten leise köcheln lassen. Eventuell noch etwas Flüssigkeit hinzugeben. Die Bolognese muss die Konsistenz der normalen Hackfleischsauce haben.'],
       40,
-      ['Asia']
+      ['asia']
     ),
 
     new Recipe(
@@ -111,7 +111,7 @@ export class RecipeService {
       ['40 g * Linsen', '1 * Zwiebel', '2 * Knoblauchzehen'],
       ['In einer hohen Pfanne die Zwiebel, den Knoblauch, die Karotten und den Sellerie bei mittlerer Temperatur anschwitzen. Das Tomatenmark hinzugeben und anrösten. ', 'Die Tomaten, die Brühe, die Linsen und die Kräuter außer Basilikum hinzugeben, mit einem Deckel bedecken und ca. 20 - 25 Minuten leise köcheln lassen. Eventuell noch etwas Flüssigkeit hinzugeben. Die Bolognese muss die Konsistenz der normalen Hackfleischsauce haben.'],
       40,
-      ['Vegan', 'Salate']
+      ['vegan', 'salate']
     ),
 
     new Recipe(
@@ -123,7 +123,7 @@ export class RecipeService {
       ['40 g * Linsen', '1 * Zwiebel', '2 * Knoblauchzehen'],
       ['In einer hohen Pfanne die Zwiebel, den Knoblauch, die Karotten und den Sellerie bei mittlerer Temperatur anschwitzen. Das Tomatenmark hinzugeben und anrösten. ', 'Die Tomaten, die Brühe, die Linsen und die Kräuter außer Basilikum hinzugeben, mit einem Deckel bedecken und ca. 20 - 25 Minuten leise köcheln lassen. Eventuell noch etwas Flüssigkeit hinzugeben. Die Bolognese muss die Konsistenz der normalen Hackfleischsauce haben.'],
       40,
-      ['Reis']
+      ['reis']
     ),
 
     new Recipe(
@@ -135,7 +135,7 @@ export class RecipeService {
       ['40 g * Linsen', '1 * Zwiebel', '2 * Knoblauchzehen'],
       ['In einer hohen Pfanne die Zwiebel, den Knoblauch, die Karotten und den Sellerie bei mittlerer Temperatur anschwitzen. Das Tomatenmark hinzugeben und anrösten. ', 'Die Tomaten, die Brühe, die Linsen und die Kräuter außer Basilikum hinzugeben, mit einem Deckel bedecken und ca. 20 - 25 Minuten leise köcheln lassen. Eventuell noch etwas Flüssigkeit hinzugeben. Die Bolognese muss die Konsistenz der normalen Hackfleischsauce haben.'],
       40,
-      ['Vegetarisch', 'Pasta']
+      ['vegetarisch', 'pasta']
     ),
 
     new Recipe(
@@ -147,7 +147,7 @@ export class RecipeService {
       ['40 g * Linsen', '1 * Zwiebel', '2 * Knoblauchzehen'],
       ['In einer hohen Pfanne die Zwiebel, den Knoblauch, die Karotten und den Sellerie bei mittlerer Temperatur anschwitzen. Das Tomatenmark hinzugeben und anrösten. ', 'Die Tomaten, die Brühe, die Linsen und die Kräuter außer Basilikum hinzugeben, mit einem Deckel bedecken und ca. 20 - 25 Minuten leise köcheln lassen. Eventuell noch etwas Flüssigkeit hinzugeben. Die Bolognese muss die Konsistenz der normalen Hackfleischsauce haben.'],
       40,
-      ['Fisch', 'Asia']
+      ['fisch', 'asia']
     ),
 
   ]
@@ -175,20 +175,29 @@ export class RecipeService {
     this.recipes.push(newRecipe);
   }
 
-  filterRecipes(search: string = "", filter: string ="") {
+  searchRecipes(search: string = "") {
     var filteredRecipes = [];
 
     if (search != "") {
 
       this.recipes.forEach(element => {
 
-        if (element.title.includes(search)) {
+        let recipeTitle = element.title.toLowerCase();
+
+        if (recipeTitle.includes(search.toLowerCase())) {
           filteredRecipes.push(element);
         }
 
       });
 
     }
+
+    return filteredRecipes;
+
+  }
+
+  filterRecipes(filter: string ="") {
+    var filteredRecipes = [];
 
     if (filter != "") {
 
@@ -207,6 +216,26 @@ export class RecipeService {
   }
 
   sortRecipes() {
+
+  }
+
+  getRecipeTags() {
+
+    let tags = [];
+
+    this.recipes.forEach(element => {
+
+      element.tags.forEach(tag => {
+
+        if (tags.indexOf(tag) === -1) {
+          tags.push(tag);
+        }
+
+      });
+
+    });
+
+    return tags;
 
   }
 

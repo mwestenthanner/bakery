@@ -17,6 +17,7 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
+
   print: boolean = false;
 
   recipeTitle: string;

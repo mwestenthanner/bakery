@@ -3,21 +3,19 @@
 
   <div class="logo">
     <a routerLink="/">
-    <h1>Welcome to the <strong>bakery!</strong></h1>
+    <h1>Willkommen in der <strong>Bakery!</strong></h1>
     </a>
   </div>
 
   <nav class="menu">
     <ul>
       <li class="dropdown" appDropdown>
-        <a href="#">Categories</a>
+        <a href="#">Kategorien</a>
         <ul class="dropdown-secondary">
-          <li><a href="#">Vegan</a></li>
-          <li><a href="#">Pasta</a></li>
-          <li><a href="#">Cakes</a></li>
+          <li *ngFor="let tag of tags" [routerLink]="['/tags', tag]">{{ tag }}</li>
         </ul>
       </li>
-      <li><a routerLink="recipes">All recipes</a></li>
+      <li><a routerLink="recipes">Alle Rezepte</a></li>
       <li><a href="#">Login</a></li>
     </ul>
   </nav>
@@ -32,15 +30,13 @@
     <li class="dropdown"
       (mouseenter)="hover=true"
       appDropdown>
-      <a href="#">Categories</a>
+      <a href="#">Kategorien</a>
     </li>
-    <li><a href="#">All recipes</a></li>
+    <li><a href="#">Alle Rezepte</a></li>
     <li><a href="#">Login</a></li>
   </ul>
   <ul class="dropdown-secondary" *ngIf="hover">
-    <li><a href="#">Vegan</a></li>
-    <li><a href="#">Pasta</a></li>
-    <li><a href="#">Cakes</a></li>
+    <li *ngFor="let tag of tags"><a href="#">{{ tag }}</a></li>
   </ul>
 </nav>
 
