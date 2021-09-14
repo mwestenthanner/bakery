@@ -1,4 +1,4 @@
-<div class="teaser-item">
+<div class="teaser-item"><a [routerLink]="['recipes', recipe.url]">
 
   <div class="gradient">
     <img [alt]=recipe.title class="teaser-img" [src]=recipe.imgVer />
@@ -11,4 +11,5 @@
     </div>
   </div>
 
-</div>
+</a></div>
+

@@ -9,6 +9,7 @@ import { RecipeService } from '../services/recipe.service';
 
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-details',
@@ -18,17 +19,27 @@ import html2canvas from 'html2canvas';
 export class DetailsComponent implements OnInit {
   print: boolean = false;
 
+  recipeTitle: string;
   detailRecipe: Recipe;
   ingredientsList: Array<[]>;
 
   isMobile: boolean = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   printButtonText: string = this.getPrintButtonText();
 
-  constructor(private recipeService: RecipeService) {
+  constructor(
+    private recipeService: RecipeService,
+    private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
-    this.detailRecipe = this.recipeService.getRecipeDetails(2);
+    this.route.params
+      .subscribe(
+        (params: Params) => {
+          this.recipeTitle = params['title'];
+        }
+      )
+
+    this.detailRecipe = this.recipeService.getRecipeDetails(this.recipeTitle);
     this.ingredientsList = this.getIngredients(this.detailRecipe.ingredients);
   }
 

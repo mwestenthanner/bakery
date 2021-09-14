@@ -12,6 +12,7 @@ export class TeaserItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
