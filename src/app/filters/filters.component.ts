@@ -32,4 +32,10 @@ export class FiltersComponent implements OnInit {
     return this.sort;
   }
 
+  clearFilters() {
+    this.search = '';
+    this.filter = '';
+    this.sort = '';
+  }
+
 }
