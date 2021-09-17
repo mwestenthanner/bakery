@@ -6,7 +6,7 @@
 
   <div class="heading">
     <h2>{{ detailRecipe.title }}</h2>
-    <span class="tag" *ngFor="let item of detailRecipe.tags">{{ item }}</span>
+    <span class="tag" *ngFor="let item of detailRecipe.tags" [routerLink]="['/tags', item]">{{ item }}</span>
   </div>
 
   <div class="container">

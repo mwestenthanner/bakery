@@ -29,18 +29,6 @@
   max-width: 12em;
 }
 
-.tag {
-  font-size: 70%;
-  padding: 0.25em 0.5em 0.25em 0.5em;
-  background-color: var(--light-accent);
-  color: var(--light-main);
-  width: fit-content;
-}
-
-.tag:not(:last-child) {
-  margin-right: 1em;
-}
-
 .description {
   font-size: 90%;
   font-style: italic;
