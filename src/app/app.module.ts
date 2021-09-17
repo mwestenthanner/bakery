@@ -14,6 +14,8 @@ import { DetailsComponent } from './details/details.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { MainComponent } from './views/main/main.component';
 import { TagComponent } from './views/tag/tag.component';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './shared/filter.pipe';
 
 const appRoutes: Routes = [
   { path: '', component: MainComponent },
@@ -33,13 +35,15 @@ const appRoutes: Routes = [
     ListItemComponent,
     FooterComponent,
     DetailsComponent,
-    DropdownDirective,
     MainComponent,
     TagComponent,
+    DropdownDirective,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

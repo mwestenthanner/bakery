@@ -8,6 +8,9 @@ import { RecipeService } from '../services/recipe.service';
 })
 export class FiltersComponent implements OnInit {
   tags: any[];
+  filter: string = '';
+  search: string = '';
+  sort: string = '';
 
   constructor(
     private recipeService: RecipeService,
@@ -15,6 +18,18 @@ export class FiltersComponent implements OnInit {
 
   ngOnInit(): void {
     this.tags = this.recipeService.getRecipeTags();
+  }
+
+  filterRecipes(): string {
+    return this.filter;
+  }
+
+  searchRecipes(): string {
+    return this.search;
+  }
+
+  sortRecipes(): string {
+    return this.sort;
   }
 
 }

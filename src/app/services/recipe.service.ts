@@ -175,50 +175,6 @@ export class RecipeService {
     this.recipes.push(newRecipe);
   }
 
-  searchRecipes(search: string = "") {
-    var filteredRecipes = [];
-
-    if (search != "") {
-
-      this.recipes.forEach(element => {
-
-        let recipeTitle = element.title.toLowerCase();
-
-        if (recipeTitle.includes(search.toLowerCase())) {
-          filteredRecipes.push(element);
-        }
-
-      });
-
-    }
-
-    return filteredRecipes;
-
-  }
-
-  filterRecipes(filter: string ="") {
-    var filteredRecipes = [];
-
-    if (filter != "") {
-
-      this.recipes.forEach(element => {
-
-        if (element.tags.indexOf(filter) > -1) {
-          filteredRecipes.push(element);
-        }
-
-      });
-
-    }
-
-    return filteredRecipes;
-
-  }
-
-  sortRecipes() {
-
-  }
-
   getRecipeTags() {
 
     let tags = [];

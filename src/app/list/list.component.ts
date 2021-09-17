@@ -9,6 +9,8 @@ import { RecipeService } from '../services/recipe.service';
 })
 export class ListComponent implements OnInit {
   @Input() listFilter: string = '';
+  @Input() listSearch: string = '';
+  @Input() listSort: string = '';
 
   recipes: Recipe[];
 
@@ -16,22 +18,9 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    if (this.listFilter === '') {
-      this.recipes = this.recipeService.getRecipes(5);
-    } else {
-      this.recipes = this.recipeService.filterRecipes(this.listFilter);
-    }
+    this.recipes = this.recipeService.getRecipes(0);
 
   }
 
-  ngOnChanges(changes): void {
-
-    if (this.listFilter === '') {
-      this.recipes = this.recipeService.getRecipes(5);
-    } else {
-      this.recipes = this.recipeService.filterRecipes(this.listFilter);
-    }
-
-  }
 
 }

@@ -1,5 +1,5 @@
 <div class="container">
   <app-list-item
-    *ngFor="let recipeItem of recipes"
+    *ngFor="let recipeItem of recipes | filter:listFilter:listSearch:listSort"
     [recipeElement]="recipeItem"></app-list-item>
 </div>

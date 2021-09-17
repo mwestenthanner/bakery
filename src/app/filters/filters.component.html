@@ -2,26 +2,42 @@
 
   <div class="input">
 
-    <svg class="search-icon" width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g><g><path d="M59.679,0c-21.984,0 -39.832,17.848 -39.832,39.832c-0,21.984 17.848,39.832 39.832,39.832c21.984,0 39.832,-17.848 39.832,-39.832c0,-21.984 -17.848,-39.832 -39.832,-39.832Zm0,5.981c18.683,-0 33.851,15.168 33.851,33.851c0,18.683 -15.168,33.851 -33.851,33.851c-18.683,0 -33.851,-15.168 -33.851,-33.851c-0,-18.683 15.168,-33.851 33.851,-33.851Z" style="fill:#ffc362;"/><path d="M37.316,69.733l-6.56,-6.56l-30.267,30.267l6.56,6.56l30.267,-30.267Z" style="fill:#ffc362;"/></g></g></svg>
+    <form (ngSubmit)="searchRecipes()">
 
-    <input type="text" id="search" placeholder="Suchen...">
+      <svg class="search-icon" width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g><g><path d="M59.679,0c-21.984,0 -39.832,17.848 -39.832,39.832c-0,21.984 17.848,39.832 39.832,39.832c21.984,0 39.832,-17.848 39.832,-39.832c0,-21.984 -17.848,-39.832 -39.832,-39.832Zm0,5.981c18.683,-0 33.851,15.168 33.851,33.851c0,18.683 -15.168,33.851 -33.851,33.851c-18.683,0 -33.851,-15.168 -33.851,-33.851c-0,-18.683 15.168,-33.851 33.851,-33.851Z" style="fill:#ffc362;"/><path d="M37.316,69.733l-6.56,-6.56l-30.267,30.267l6.56,6.56l30.267,-30.267Z" style="fill:#ffc362;"/></g></g></svg>
 
-    <select name="filter" id="filter">
-      <option value="">Filtern</option>
-      <option *ngFor="let tag of tags" [value]=tag>{{ tag }}</option>
-    </select>
+      <input [(ngModel)]="search" name="search" type="text" id="search" placeholder="Suchen...">
 
-    <select name="sort" id="sort">
-      <option value="">Sortieren</option>
-      <option value="latest">Neueste</option>
-      <option value="oldest">Älteste</option>
-      <option value="alphabet">A bis Z</option>
-    </select>
+    </form>
+
+    <form (ngSubmit)="filterRecipes()">
+
+      <select [(ngModel)]="filter" name="filter" id="filter">
+        <option value="">Filtern</option>
+        <option *ngFor="let tag of tags" [value]=tag>{{ tag }}</option>
+      </select>
+
+    </form>
+
+    <form (ngSubmit)="sortRecipes()">
+
+      <select [(ngModel)]="sort" name="sort" id="sort">
+        <option value="">Sortieren</option>
+        <option value="latest">Neueste</option>
+        <option value="oldest">Älteste</option>
+        <option value="alphabet">A - Z</option>
+      </select>
+
+    </form>
 
   </div>
 
-  <button class="button hover" type="submit">Filter</button>
+  <button class="button hover" type="reset">Zurücksetzen</button>
 
 </div>
+
+<p>Filter: {{ filter }} / Search: {{ search }} / Sort: {{ sort }} </p>
+
+<app-list [listFilter]=filter [listSearch]=search [listSort]=sort></app-list>
 
 

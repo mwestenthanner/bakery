@@ -18,6 +18,11 @@
   margin-right: 1em;
 }
 
+form {
+  width: fit-content;
+  display: inline;
+}
+
 #search, #search:focus {
   padding: 10px;
   background-color: transparent;
@@ -38,11 +43,13 @@ select {
   border: none;
   color: var(--light-main);
   margin-right: 3em;
+  text-transform: capitalize;
 }
 
 select option {
   background-color: var(--light-bg);
   color: var(--light-main);
+  text-transform: capitalize;
 }
 
 /* --- Hide on small screens, to be displayed when hitting button --- */
