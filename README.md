@@ -1,6 +1,8 @@
-# Bakery: A recipe website powered by Notion
+# Bakery: A sample recipe website, written in Angular
 
-With Bakery, I want to provide public access to my Notion recipe database. This project is an Angular app with a clean UI and will fetch recipe data from my Notion database via the official API. The backend will run serverless, via Netlify Functions.
+Deployed on Netlify: https://angular-bakery.netlify.app/
+
+This Angular app is not connected to a backend or datasource, instead displaying a sample dataset.
 
 Mockup of the UI:
 ![Desktop mockup of the Bakery App](https://raw.githubusercontent.com/mwestenthanner/bakery/main/public/desktop_dark.jpg)
